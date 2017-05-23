@@ -2,57 +2,72 @@ package Designpatterns.Adapter;
 
 //适配器模式的两种
 //1 接口型适配器
-public class Adapter extends ExitingClass implements RequiredInterface {
+/*2 继承一个类维持另一类引用的适配器
+ * 通过是适配器类使得原本接口不匹配的两个类能在一起工作
+ * eg：国内的电源和国外的电源
+ * */
+interface GermanyAdapterInterface {
+	public void twoCharg();
+}
+
+abstract class GermanyAdapter {
+	public abstract void twoCharg();
+}
+
+class ChinaAdapter {
+	public static void threeCharg() {
+		System.out.println("使用国产插头三向充电");
+	}
+}
+
+// 现在有一个德国宾馆里面只提供了一个德国擦适配器可以充电
+class GermanyHotel implements GermanyAdapterInterface {
 
 	@Override
-	public void requiredMethod() {
+	public void twoCharg() {
 		// TODO Auto-generated method stub
-		System.out.println("A required Method");
-	}
-
-	// overload
-	public static int usefulMethod(int a) {
-		System.out.println("OOOP");
-		return a;
+		System.out.println("使用德国2向插头充电");
 	}
 
 }
 
-// 类与对象的适配器
-class Adapter2 extends RequiredClass {
+// 实现继承接口的适配器
+class Adapter1 extends ChinaAdapter implements GermanyAdapterInterface {
 
-	ExitingClass exitObj;
+	@Override
+	public void twoCharg() {
+		// TODO Auto-generated method stub
+		this.threeCharg();
+		System.out.println("开始适配");
+		System.out.println("使用德国两向插头充电");
+	}
 
-	private Adapter2(ExitingClass exitObj) {
+}
+
+class Adapter2 extends GermanyHotel {
+	ChinaAdapter ad;
+
+	public Adapter2(ChinaAdapter ad) {
 		super();
-		this.exitObj = exitObj;
+		this.ad = ad;
 	}
 
 	@Override
-	public void requiredMethod() {
+	public void twoCharg() {
 		// TODO Auto-generated method stub
-		// 使用对象调用方法
-		exitObj.usefulMethod();
-	}
-
-	// overload
-	public static int usefulMethod(int a) {
-		System.out.println("OOO");
-		return a;
+		ad.threeCharg();
+		System.out.println("开始适配");
+		super.twoCharg();
 	}
 
 }
 
-interface RequiredInterface {
-	public void requiredMethod();
-}
-
-abstract class RequiredClass {
-	public abstract void requiredMethod();
-}
-
-class ExitingClass {
-	public static void usefulMethod() {
-		System.out.println("A usefulMethod");
+public class Adapter {
+	// 测试类
+	public static void main(String[] args) {
+		Adapter1 ad1 = new Adapter1();
+		ad1.twoCharg();
+		Adapter2 ad2 = new Adapter2(new ChinaAdapter());
+		ad2.twoCharg();
 	}
 }

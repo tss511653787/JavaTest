@@ -28,16 +28,20 @@ public class genericTest<T, U> {
 		return first;
 	}
 
-	public void setFirst(T first) {
-		this.first = first;
+	@SuppressWarnings("unchecked")
+	public void setFirst(Object object) {
+		// this.first = (T) object;
+		// 使用桥方法解决
+		this.setFirst((T) object);
 	}
 
 	public T getSecond() {
 		return second;
 	}
 
-	public void setSecond(T second) {
-		this.second = second;
+	@SuppressWarnings("unchecked")
+	public void setSecond(Object temp) {
+		this.setSecond((T) temp);
 	}
 
 	public U getThird() {
@@ -54,7 +58,9 @@ public class genericTest<T, U> {
 	}
 
 	// 对变量的限定
-	@SuppressWarnings("unchecked")
+	// 泛型方法中存在数组的时候会惊醒检查
+	// 使用忽略检查可以解决异常
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static <T extends Comparable> T findmin(T[] arr) {
 		T min = arr[0];
 		for (T c : arr) {
@@ -63,6 +69,19 @@ public class genericTest<T, U> {
 			}
 		}
 		return min;
+	}
+
+	// 编写一个swap交换first和second值
+	public static void swap(genericTest<?, ?> t) {
+		swapHelper(t);
+	}
+
+	public static <T> void swapHelper(genericTest<?, ?> t) {
+		// TODO Auto-generated method stub
+		@SuppressWarnings("unchecked")
+		T temp = (T) t.getFirst();
+		t.setFirst(t.getSecond());
+		t.setSecond(temp);
 	}
 
 	public static void main(String[] args) {

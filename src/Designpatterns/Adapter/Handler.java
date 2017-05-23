@@ -15,13 +15,13 @@ public abstract class Handler {
 		Response res = null;
 		if (this.getHandleLevel() == (request.getLevel())) {
 			// 自己处理
-			return echo(request);
+			return this.echo(request);
 		} else if (this.nexthandler != null) {
 			res = this.nexthandler.handleMessage(request);
 			return res;
 		} else {
 			// 如果自己后面没有处理节点则自己处理
-			return echo(request);
+			return this.echo(request);
 		}
 	}
 
