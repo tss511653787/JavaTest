@@ -1,4 +1,4 @@
-package HuaweiOnline;
+package Huawei_OnNiuKe;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package HuaweiOnline;
+package Huawei_OnNiuKe;
 
 import java.util.HashMap;
 import java.util.Map;

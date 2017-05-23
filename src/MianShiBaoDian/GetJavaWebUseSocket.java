@@ -82,22 +82,19 @@ public class GetJavaWebUseSocket {
 	}
 
 	// 使用NIO里面的可中断套接字实现可以interrupted的sokect Telnet服务器
-	/*
-	 * public static void nioclient() { try { // // InetSocketAddress remote =
-	 * new InetSocketAddress(8189); // SocketChannel channel =
-	 * SocketChannel.open(remote);
-	 * 
-	 * // 获取输入输出流 Socket soc = new Socket("localhost", 8189); if (soc.isBound())
-	 * { System.out.println("success"); } java.io.OutputStream output =
-	 * soc.getOutputStream(); java.io.InputStream input = soc.getInputStream();
-	 * 
-	 * Scanner inscan = new Scanner(input); boolean inflag = true; // 写逻辑
-	 * Scanner clientIn = new Scanner(System.in); PrintWriter out = new
-	 * PrintWriter(output); // 读逻辑 while (inflag && inscan.hasNext()) { String
-	 * strin = inscan.nextLine(); if (strin.equals("ByeBye")) { inflag = false;
-	 * } System.out.println(strin); out.println(clientIn.nextLine()); }
-	 * soc.close(); } catch (Exception e) { // TODO: handle exception } }
-	 */
+	// ****重点
+	public static void nioclient() throws IOException {
+		InetSocketAddress remote = new InetSocketAddress("", 9189);
+		SocketChannel channel = SocketChannel.open(remote);
+		Scanner scan = new Scanner(channel);
+		while (!Thread.currentThread().isInterrupted() && scan.hasNext()) {
+			String data = scan.nextLine();
+			System.out.println(data);
+		}
+		scan.close();
+		channel.close();
+	}
+
 }
 
 // 服务器线程处理逻辑
