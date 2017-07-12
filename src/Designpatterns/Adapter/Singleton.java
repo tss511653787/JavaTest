@@ -20,7 +20,6 @@ class Singleton1 {
 	public static Singleton1 getInstance() {
 		return single1;
 	}
-
 }
 
 // 懒汉模式(线程安全和不安全)

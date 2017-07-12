@@ -59,7 +59,6 @@ class Adapter2 extends GermanyHotel {
 		System.out.println("开始适配");
 		super.twoCharg();
 	}
-
 }
 
 public class Adapter {

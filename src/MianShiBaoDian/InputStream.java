@@ -41,13 +41,15 @@ public class InputStream {
 		 * DataInputStream(in); int c = datain.readInt(); System.out.println(c);
 		 */
 		// zip文件的读写
+		// 方法一 使用zipEntry(推荐)
 		String pathname = "C:/Users/Administrator/Desktop/a.zip";
 		File file = new File(pathname);
 		FileInputStream in = new FileInputStream(file);
 		ZipInputStream zin = new ZipInputStream(in);
-		ZipEntry entry;
 		StringBuilder inbuild = new StringBuilder();
-		while ((entry = zin.getNextEntry()) != null) {
+		while (zin.getNextEntry() != null) {
+			// 读取下一个 ZIP 文件条目并将流定位到该条目数据的开始处:起到了流的定位作用 所以是有必要的语句
+			ZipEntry entry = zin.getNextEntry();
 			String filename = entry.getName();
 			inbuild.append(filename + "\n");
 			Scanner scan = new Scanner(zin);

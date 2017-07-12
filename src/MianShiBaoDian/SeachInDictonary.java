@@ -75,7 +75,6 @@ public class SeachInDictonary {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public static void eumerate(File file) {

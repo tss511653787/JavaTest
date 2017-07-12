@@ -10,9 +10,7 @@ import java.util.TreeSet;
 
 public class Huawei1 {
 	public static void main(String[] args) {
-		// MingMing();
-		// ChangeToTen();
-		System.out.println(getResult(180));
+		SumOFOneBinaryNum();
 	}
 
 	public static void MingMing() {
@@ -160,4 +158,17 @@ public class Huawei1 {
 		}
 	}
 
+	public static void SumOFOneBinaryNum() {
+		Scanner scan = new Scanner(System.in);
+		int input = scan.nextInt();
+		String res = Integer.toBinaryString(input);
+		System.out.println(res);
+		int count = 0;
+		for (int i = 0; i < res.length(); i++) {
+			if (res.charAt(i) == '1') {
+				count++;
+			}
+		}
+		System.out.print(count);
+	}
 }

@@ -41,7 +41,6 @@ public class Nio {
 		charBuffer = decoder.decode(buf.asReadOnlyBuffer());
 		String str = charBuffer.toString();
 		System.out.println(str);
-
 	}
 
 	// 对文件加锁
@@ -50,6 +49,7 @@ public class Nio {
 		FileInputStream filein = new FileInputStream(file);
 		FileChannel channel = filein.getChannel();
 		// 对channel加锁
+		// true加一个独占锁
 		FileLock lock = channel.tryLock(0, channel.size(), true);
 		StringBuilder str = new StringBuilder();
 		while (filein.read() != -1) {
