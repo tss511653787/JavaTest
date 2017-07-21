@@ -1,7 +1,9 @@
 package Review;
 
+import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.List;
 import java.util.Set;
 
 public class EnumSetAndEnumMap {
@@ -21,7 +23,11 @@ public class EnumSetAndEnumMap {
 		for (Number n : Number_mao_ketSet) {
 			System.out.println(n + " " + Number_map.get(n));
 		}
+		// 算法
+		List<String> list = new ArrayList<String>();
+		// list.sort(一个comparator对象)
 	}
+
 }
 
 enum Number {

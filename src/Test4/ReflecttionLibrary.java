@@ -38,22 +38,27 @@ public class ReflecttionLibrary {
 		System.out.println(cl.getName());
 		System.err.println("{");
 		System.out.println();
+		System.out.println("--------------");
 		// 首先输出这个类的全部对象实例
+		System.out.println("print  fields");
 		Field[] f = cl.getDeclaredFields();
 		for (Field field : f) {
 			System.out.println(field.toString());
 		}
+		System.out.println("--------------");
 		// 输出这个类的全部构造方法
 		Constructor[] con1 = cl.getConstructors();
 		for (Constructor constructor : con1) {
 			System.out.println(constructor.toString());
 		}
 		System.out.println();
+		System.out.println("--------------");
 		// 最后输出这个类的方法和继承来的方法
 		Method[] m1 = cl.getMethods();
 		for (Method method : m1) {
 			System.out.println(method.toString());
 		}
+		System.out.println("--------------");
 		System.out.println("}");
 	}
 

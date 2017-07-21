@@ -12,7 +12,11 @@ public class SeachInDictonary {
 	 */
 	private static final int FILE_QUEUQ_SIZE = 10;
 	private static final int SEARCH_THREAD_NUM = 100;
+	// 队列尾结束文件标识
 	private static final File END = new File("");
+	/*
+	 * 没有上线边界(单链表实现)
+	 */
 	private static Queue<File> blockingQueue = new LinkedBlockingQueue<File>();
 
 	public static void main(String[] args) {
@@ -77,6 +81,9 @@ public class SeachInDictonary {
 		}
 	}
 
+	/*
+	 * 迭代类 如果遇到文件夹则递归 将每一个文件放到阻塞队列中
+	 */
 	public static void eumerate(File file) {
 		// TODO Auto-generated method stub
 		File[] filelist = file.listFiles();

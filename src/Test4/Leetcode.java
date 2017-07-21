@@ -9,6 +9,12 @@ import test2.IntDataNode;
 import test3.BTNode;
 
 public class Leetcode {
+	private String let;
+
+	public Leetcode(String let) {
+		super();
+		this.let = let;
+	}
 
 	// 求完全二叉树的节点个数
 	// 深度n 叶子最多是2^(n-1)个 节点数最多是(2^n)-1个

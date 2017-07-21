@@ -3,6 +3,8 @@ package MianShiBaoDian;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,10 +31,12 @@ public class ConcurrentCollectionIn8 {
 		}
 		String[] in = tempBuf.toString().split(" ");
 		for (int i = 0; i < in.length; i++) {
-			concurrMap.putIfAbsent(in[i], new LongAdder());
+			LongAdder value = concurrMap.putIfAbsent(in[i], new LongAdder());
 			// 原子自增
-			concurrMap.get(in[i]).increment();
+			value.increment();
 		}
+		// Map<String, Integer> map = new HashMap<>();
+		// map.put("", map.getOrDefault("", 0) + 1);
 		for (int i = 0; i < in.length; i++) {
 			conmap.put(in[i], conmap.getOrDefault(in[i], 0) + 1);
 		}
@@ -52,6 +56,6 @@ public class ConcurrentCollectionIn8 {
 				Integer::sum);
 		System.out.println(sum);
 		ExecutorService pool = Executors.newCachedThreadPool();
-		
+
 	}
 }

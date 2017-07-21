@@ -20,14 +20,16 @@ public class RunnableTest {
 		// th2.start();
 		CallableFutureThreadTest test1 = new CallableFutureThreadTest();
 		FutureTask<Integer> ft = new FutureTask<Integer>(test1);
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
 			System.out.println(Thread.currentThread().getName() + " " + i);
-			if (i == 20) {
+			if (i == 5) {
+				// runnable
 				Thread t = new Thread(ft, "CFT");
 				t.start();
 			}
 		}
-		System.out.println(ft.get());
-
+		// future
+		Integer res = ft.get();
+		System.out.println(res);
 	}
 }

@@ -1,6 +1,9 @@
 package Test4;
 
 import java.util.Arrays;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 //银行存钱的同步例子
 //使用synchronized关键字实现lock unlock
@@ -31,6 +34,8 @@ public class SynchronizedBank {
 class Bank {
 	// 银行中有n个账户
 	private final double[] accounts;
+	private Lock mylock = new ReentrantLock();
+	private Condition enougthMoneyCondition = mylock.newCondition();
 
 	public Bank(int n, double intitalBalance) {
 		// intitalBalance 每个账户中的初始存款
@@ -38,17 +43,28 @@ class Bank {
 		Arrays.fill(accounts, intitalBalance);
 	}
 
-	public synchronized void transfer(int from, int to, double amount)
+	public void transfer(int from, int to, double amount)
 			throws InterruptedException {
-		while (accounts[from] < amount) {
-			wait();
+		mylock.lock();
+		try {
+			while (accounts[from] < amount) {
+				enougthMoneyCondition.await();
+			}
+			System.out.println("当前线程" + Thread.currentThread());
+			accounts[from] -= amount;
+			System.out.println(amount + " from " + from + " to " + to);
+			accounts[to] += amount;
+			System.out.println("总共钱数:" + getTotalBlance());
+			/*
+			 * 这个位置进行signalAll
+			 */
+			enougthMoneyCondition.signalAll();
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			mylock.unlock();
 		}
-		System.out.println("当前线程" + Thread.currentThread());
-		accounts[from] -= amount;
-		System.out.println(amount + " from " + from + " to " + to);
-		accounts[to] += amount;
-		System.out.println("总共钱数:" + getTotalBlance());
-		notifyAll();
+
 	}
 
 	private synchronized String getTotalBlance() {
