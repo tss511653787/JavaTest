@@ -18,7 +18,7 @@ public class TreePath {
 			return;
 		list.add(root);
 		if (root.left == null && root.right == null) {
-			// 到根节点就打印
+			// 到叶子节点就打印
 			for (TreeNode temp : list) {
 				System.out.print(temp.value + " ");
 			}

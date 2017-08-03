@@ -7,8 +7,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Scanner;
-import Test5.InnerClassTest;
 
+import Test5.InnerClassTest;
 import test3.BTNode;
 
 //程序设计 使用静态反射类输出一个类的全部信息
@@ -36,7 +36,7 @@ public class ReflecttionLibrary {
 		}
 		Class cl = Class.forName(className);
 		System.out.println(cl.getName());
-		System.err.println("{");
+		System.out.println("{");
 		System.out.println();
 		System.out.println("--------------");
 		// 首先输出这个类的全部对象实例
@@ -47,14 +47,14 @@ public class ReflecttionLibrary {
 		}
 		System.out.println("--------------");
 		// 输出这个类的全部构造方法
-		Constructor[] con1 = cl.getConstructors();
-		for (Constructor constructor : con1) {
+		Constructor<String>[] con1 = cl.getDeclaredConstructors();
+		for (Constructor<String> constructor : con1) {
 			System.out.println(constructor.toString());
 		}
 		System.out.println();
 		System.out.println("--------------");
 		// 最后输出这个类的方法和继承来的方法
-		Method[] m1 = cl.getMethods();
+		Method[] m1 = cl.getDeclaredMethods();
 		for (Method method : m1) {
 			System.out.println(method.toString());
 		}

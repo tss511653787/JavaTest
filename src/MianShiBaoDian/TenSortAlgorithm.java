@@ -1,6 +1,7 @@
 package MianShiBaoDian;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TenSortAlgorithm {
 	// 十大常用排序算法复习
@@ -29,6 +30,9 @@ public class TenSortAlgorithm {
 		int len = arr.length;
 		int temp;
 		for (int i = 0; i < len; i++)
+			/*
+			 * 每次把大数冒到末尾
+			 */
 			for (int j = 0; j < len - 1 - i; j++) {
 				if (arr[j] > arr[j + 1]) {
 					temp = arr[j];
@@ -119,11 +123,11 @@ public class TenSortAlgorithm {
 		// 将第一个数作为target标志
 		int targrt = arr[low];
 		while (low < hight) {
-			while ((low < hight) && (arr[hight] >= targrt)) {
+			while (arr[hight] >= targrt) {
 				hight--;
 			}
 			arr[low] = arr[hight];
-			while ((low < hight) && (arr[low] < targrt)) {
+			while (arr[low] < targrt) {
 				low++;
 			}
 			arr[hight] = arr[low];
@@ -176,7 +180,8 @@ public class TenSortAlgorithm {
 	public static void heapsort(int[] arr) {
 		int n = arr.length - 1;
 		while (n > 0) {
-			// 建堆
+			// 建立大顶堆
+			// 每次把堆顶数字和数组尾数字交换
 			makeheap(arr, n);
 			int temp;
 			temp = arr[0];
@@ -236,7 +241,9 @@ public class TenSortAlgorithm {
 			}
 			tempC[i] = count;
 		}
-		// tempB数组输出
+		/*
+		 * tempB输出结果 关键代码
+		 */
 		for (int k = arr.length - 1; k >= 0; k--) {
 			int num = arr[k];
 			tempB[tempC[num] - 1] = num;
@@ -263,6 +270,7 @@ public class TenSortAlgorithm {
 	// 基数排序的收集 分配
 	// 思路:按照从最低位到最高位进行分配 然后收集
 	public static void RadixSort(int[] arr) {
+		// 获取数组中最大数字的位数
 		int max = findMax(arr);
 		int lenmax = findLen(max);
 		// 建立10个桶

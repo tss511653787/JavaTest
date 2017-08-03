@@ -9,12 +9,28 @@ import java.util.Stack;
 import test3.BTNode;
 
 public class NiuKe2 {
+	private static int ssd = 12;
+	private static String sss = "abc";
+	private int id;
+
+	
+	public NiuKe2() {
+		super();
+	}
+
+	public NiuKe2(int id) {
+		super();
+		this.id = id;
+	}
+
 	public static void main(String[] args) {
 		// TreeNode root = new TreeNode(1);
 		// System.out.println(Convert(root).val);
 		String str = "aba";
 		String res = "";
 		// permutation1(str, res, str.length(), null);
+		NiuKe2 niu1 = new NiuKe2();
+		NiuKe2 niu2 = new NiuKe2();
 	}
 
 	public class RandomListNode {

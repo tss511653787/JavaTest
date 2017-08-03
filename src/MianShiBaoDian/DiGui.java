@@ -16,14 +16,13 @@ public class DiGui {
 
 	/**
 	 * @param args
-	 *            全排列去重复输出 输入没有空格
+	 *            全排列去重复输出 输入没有空格 eg：输出abc的全排序
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		String inputStr = scanner.nextLine();
 		Permutation(inputStr).forEach(x -> System.out.println(x));
-
 	}
 
 	private static void Outlist(ArrayList<String> inlist, String answer,

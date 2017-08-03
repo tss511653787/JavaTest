@@ -28,21 +28,10 @@ public class InputStream {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		/*
-		 * InputStreamReader in = new InputStreamReader(System.in); char[] a =
-		 * new char[10]; char s = (char) in.read(); in.close();
-		 * System.out.println(s);
-		 */
-		/*
-		 * 读写二进制数据 String pathname = "C:/Users/Administrator/Desktop/a"; File
-		 * file = new File(pathname); FileInputStream in = new
-		 * FileInputStream(file); DataInputStream datain = new
-		 * DataInputStream(in); int c = datain.readInt(); System.out.println(c);
-		 */
 		// zip文件的读写
 		// 方法一 使用zipEntry(推荐)
 		String pathname = "C:/Users/Administrator/Desktop/a.zip";
+
 		File file = new File(pathname);
 		FileInputStream in = new FileInputStream(file);
 		ZipInputStream zin = new ZipInputStream(in);
@@ -60,6 +49,7 @@ public class InputStream {
 		}
 		zin.close();
 		in.close();
+
 		// System.out.println(inbuild.toString());
 		// 方法2 使用zipfile类 通过zipEntry 读取zip中的每一个文件
 		ZipFile zipfile = new ZipFile(file);

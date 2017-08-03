@@ -48,14 +48,18 @@ public class Bag_Problem {
 			// 列数控制
 			for (int j = 1; j < n + 1; j++) {
 				// 如果第i件物品的重量小于等于j 可以放入背包，因为i从1开始 所以i-1表示w中的第i个物品
+				// 第i个物品放入总容积为j的背包
 				if (w[i - 1] <= j) {
+					// 放入第i个物体的价值大就放入 否则就不放入
 					if (matrix[i - 1][j] < matrix[i - 1][j - w[i - 1]]
 							+ p[i - 1]) {
 						matrix[i][j] = matrix[i - 1][j - w[i - 1]] + p[i - 1];
 					} else {
 						matrix[i][j] = matrix[i - 1][j];
 					}
-				} else {
+				}
+				// 第i个物品无法放入总容积为j的背包
+				else {
 					matrix[i][j] = matrix[i - 1][j];
 				}
 			}

@@ -57,6 +57,7 @@ public class MicroSoft {
 		// 是叶子节点
 		if (r.leftchild == null && r.rightchild == null) {
 			// 到叶子就把这个除了叶子之外的双亲list加入到listT中
+			@SuppressWarnings("unchecked")
 			LinkedList<PTree> copy = (LinkedList<PTree>) list.clone();
 			listT.add(copy);
 			return;

@@ -62,6 +62,11 @@ public class Test {
 
 	private static int findSmall(int answer, int n1, int n2, int n3, int deep) {
 		// TODO Auto-generated method stub
+
+		if (deep == 0) {
+			return 0;
+		}
+		// find min and max value in n1 n2 n3
 		int min = n1;
 		if (n2 < min)
 			min = n2;
@@ -80,6 +85,7 @@ public class Test {
 			return findSmall(answer - (int) Math.pow(2, deep - 1) / 2, n1, n2,
 					n3, deep - 1);
 		} else {
+			// answer<min
 			// 向右子树移动
 			return findSmall(answer + (int) Math.pow(2, deep - 1) / 2, n1, n2,
 					n3, deep - 1);

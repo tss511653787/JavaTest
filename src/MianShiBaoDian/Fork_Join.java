@@ -23,7 +23,6 @@ public class Fork_Join {
 		pool.invoke(count);
 		System.out.println(count.join());
 	}
-
 }
 
 class Counter extends RecursiveTask<Integer> {

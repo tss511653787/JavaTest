@@ -12,7 +12,7 @@ public class Sever_Socket extends Thread {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 服务器端是使用了多线程编程 监听Socket端口
-		int port = 6066;
+		int port = 9909;
 		Thread t = new Sever_Socket(port);
 		t.start();
 	}

@@ -13,6 +13,10 @@ public class ExtendsAndSuper {
 	private static List<? extends Fruit> fruits;
 	private static List<? super RedApple> redapples;
 
+	public static <T> T[] getArr(T a) {
+		return null;
+	}
+
 	public static void main(String[] args) {
 		// 可以接受任何Fruit类以下的实例
 		fruits = new ArrayList<Apple>();
@@ -27,6 +31,7 @@ public class ExtendsAndSuper {
 		redapples.add(new RedApple());
 		// 但是get不可行 因为下界是redapple不知道实际存放的是redapple的哪个父类
 		// RedApple a = redapples.get(0);
+
 	}
 }
 
