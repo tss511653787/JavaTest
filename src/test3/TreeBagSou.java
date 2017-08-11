@@ -33,8 +33,27 @@ public class TreeBagSou implements Cloneable {
 	@Override
 	protected TreeBagSou clone() throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
+		// 实现深复制
 		BTNode aNew = BTNode.copyTree(this.root);
 		return new TreeBagSou(aNew);
+	}
+
+	// 二叉搜索树查找节点
+	public static BTNode SearchInBSTtree(TreeBagSou root, int target) {
+		BTNode p = root.getRoot();
+		BTNode answer = null;
+		boolean flag = false;
+		while (p != null && !flag) {
+			if ((int) p.getData() < target) {
+				p = p.getRight();
+			} else if ((int) p.getData() == target) {
+				flag = true;
+				answer = p;
+			} else {
+				p = p.getLeft();
+			}
+		}
+		return answer;
 	}
 
 	// target在二叉搜索树中出现的次数
@@ -63,25 +82,78 @@ public class TreeBagSou implements Cloneable {
 		if (cursor == null) {
 			// 为空的情况
 			root = (new BTNode(element, null, null));
+
+		} else {
+			// 寻找插入点
+			while (true) {
+				if ((int) cursor.getData() >= element) {
+					BTNode next = cursor.getLeft();
+					if (next != null) {
+						cursor = next;
+					} else {
+						cursor.setLeft(new BTNode(element, null, null));
+						break;
+					}
+				} else {
+					BTNode next = cursor.getRight();
+					if (next != null) {
+						cursor = next;
+					} else {
+						cursor.setRight(new BTNode(element, null, null));
+						break;
+					}
+				}
+			}
+		}
+	}
+
+	// BST的删除节点算法(3种情况+一种空树的情况)
+	public boolean deleteNodeInBST(int target) {
+		BTNode cursor = root;
+		BTNode parent = null;
+		if (cursor == null) {
+			return false;
 		}
 		while (true) {
-			if ((int) cursor.getData() >= element) {
-				BTNode next = cursor.getLeft();
-				if (next != null) {
-					cursor = next;
-				} else {
-					cursor.setLeft(new BTNode(element, null, null));
-					break;
-				}
+			if (cursor == null) {
+				break;
 			} else {
-				BTNode next = cursor.getRight();
-				if (next != null) {
-					cursor = next;
+
+				if ((int) cursor.getData() < target) {
+					parent = cursor;
+					cursor = cursor.getRight();
+				} else if ((int) cursor.getData() > target) {
+					parent = cursor;
+					cursor = cursor.getLeft();
 				} else {
-					cursor.setRight(new BTNode(element, null, null));
+					// 在树中
 					break;
 				}
 			}
+		}
+		if (cursor == null) {
+			return false;
+		} else {
+			// 情况1 cursor指向根节点 但是没有左孩子
+			if (cursor == root && cursor.getLeft() == null) {
+				cursor = cursor.getRight();
+				root = cursor;
+			} else if (cursor.getLeft() == null) {
+				// 情况2 待删除的节点没有左孩子(右孩子不知道有没有)
+				if (cursor == parent.getLeft()) {
+					// 待删除的节点在父节点左面
+					parent.setLeft(cursor.getRight());
+				} else {
+					// 待删除的节点在父节点右面
+					parent.setRight(cursor.getRight());
+				}
+			} else {
+				// 情况3 待删除节点有左孩子(或左子树) 从左子树中找一个来替代删除节点的值
+				// 这个值是它左子树中最右面的元素(最大元素)
+				cursor.setData(cursor.getLeft().getRightMostData());
+				cursor.setLeft(cursor.getLeft().removeRightMost());
+			}
+			return true;
 		}
 	}
 
@@ -91,6 +163,7 @@ public class TreeBagSou implements Cloneable {
 		// 先序递归调用add方法
 		if (addroot != null) {
 			this.add((int) addroot.getData());
+			// 递归
 			this.addTree(addroot.getLeft());
 			this.addTree(addroot.getRight());
 		}

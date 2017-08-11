@@ -25,7 +25,6 @@ public class ArrayListTest {
 		System.out.println(str.substring(1, 2));
 		// 集合框
 		List<Integer> list2 = new ArrayList<Integer>();
-		
 	}
 
 	public static int[] insertElement(int[] arr, int target) {
@@ -43,6 +42,10 @@ public class ArrayListTest {
 		// index从0开始
 		int arrlength = arr.length;
 		int[] newarr = new int[arrlength - 1];
+		/*
+		 * 复制数组的前一段和后一段
+		 */
+		// arraycopy方法包含前面的位置不包含后面的位置
 		System.arraycopy(arr, 0, newarr, 0, index);
 		System.arraycopy(arr, index + 1, newarr, index, arrlength - 1 - index);
 		return newarr;

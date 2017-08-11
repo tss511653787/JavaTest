@@ -22,7 +22,6 @@ public class RecursiveApp {
 			System.out.println("-");
 			PrintInt(-number);
 		}
-
 	}
 
 	public static double pow(Double x, int n) {

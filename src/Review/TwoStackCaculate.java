@@ -13,7 +13,7 @@ public class TwoStackCaculate {
 	 */
 
 	public static void main(String[] args) {
-		Stack<Integer> numStk = new Stack<>();
+		Stack<Double> numStk = new Stack<>();
 		Stack<Character> calStk = new Stack<>();
 		calStk.push('#');
 		Scanner scan = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class TwoStackCaculate {
 			try {
 				// 一个位数
 				String num = FindNum(in, i);
-				int n = Integer.parseInt(String.valueOf(num));
+				double n = Double.parseDouble(String.valueOf(num));
 				numStk.push(n);
 				i = i + num.length();
 			} catch (Exception e) {
@@ -37,10 +37,10 @@ public class TwoStackCaculate {
 						// no code
 					} else {
 						// 后出栈的是第一个数
-						int b = numStk.pop();
-						int a = numStk.pop();
+						double b = numStk.pop();
+						double a = numStk.pop();
 						char col = calStk.pop();
-						int res = Caculate(a, b, col);
+						double res = Caculate(a, b, col);
 						numStk.push(res);
 						// i--;
 					}
@@ -48,10 +48,10 @@ public class TwoStackCaculate {
 			}
 		}
 		while (calStk.peek() != '#') {
-			int a = numStk.pop();
-			int b = numStk.pop();
+			double b = numStk.pop();
+			double a = numStk.pop();
 			char col = calStk.pop();
-			int res = Caculate(a, b, col);
+			double res = Caculate(a, b, col);
 			numStk.push(res);
 		}
 		System.out.println(numStk.pop());
@@ -64,7 +64,8 @@ public class TwoStackCaculate {
 		// TODO Auto-generated method stub
 		StringBuilder temp = new StringBuilder();
 		for (int j = i; j < in.length(); j++) {
-			if (in.charAt(j) >= '0' && in.charAt(j) <= '9') {
+			if ((in.charAt(j) >= '0' && in.charAt(j) <= '9')
+					|| in.charAt(j) == '.') {
 				temp.append(in.charAt(j));
 			} else {
 				break;
@@ -73,7 +74,7 @@ public class TwoStackCaculate {
 		return temp.toString();
 	}
 
-	private static int Caculate(int a, int b, char col) {
+	private static double Caculate(double a, double b, char col) {
 		// TODO Auto-generated method stub
 		if (col == '+') {
 			return a + b;

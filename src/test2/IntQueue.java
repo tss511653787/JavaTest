@@ -5,6 +5,9 @@ package test2;
 
 public class IntQueue {
 	int manyNodes;
+	/*
+	 * head 队头指针 rear 队尾指针
+	 */
 	IntDataNode head;
 	IntDataNode rear;
 
@@ -33,6 +36,7 @@ public class IntQueue {
 			rear = head;
 			manyNodes++;
 		} else {
+			// 向队列尾部插入节点
 			IntDataNode newdata = new IntDataNode(target, null);
 			rear.setLink(newdata);
 			rear = rear.getLink();

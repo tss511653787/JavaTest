@@ -1,7 +1,5 @@
 package test3;
 
-import java.util.Hashtable;
-
 public class SearchCode {
 	public static int binarySearch(int[] array, int target) {
 		// 使用非递归实现二分查找
@@ -44,7 +42,6 @@ public class SearchCode {
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		// System.out.println(binarySearch(arr, 9));
 		System.out.println(BinarySearch(arr, 0, 9, 9));
-		Hashtable<String, Integer> tab = new Hashtable<>(500);
-		
+
 	}
 }

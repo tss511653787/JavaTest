@@ -132,22 +132,23 @@ class IP {
 	public String toString() {
 		// 注意大哥！！！ 这个地方要重写toString方法
 		return this.IP;
-
 	}
 
 	public void setIP(String iP) {
 		IP = iP;
 	}
 
-	public static Comparator IPComparator = new Comparator() {
+	// -1 0 1
+	public static Comparator<IP> IPComparator = new Comparator<IP>() {
 		@Override
-		public int compare(Object arg0, Object arg1) {
-			IP ip1 = (IP) arg0;
-			IP ip2 = (IP) arg1;
-			return compartTo(ip1.IP, ip2.IP);
+		public int compare(IP o1, IP o2) {
+			// TODO Auto-generated method stub
+			return compartTo(o1.getIP(), o2.getIP());
 		}
+
 	};
 
+	// parse ip_str->Long[] ip
 	private static long[] parseIp(String ip) {
 		ip = ip.replace(".", "#");
 		long result[] = new long[4];
@@ -162,7 +163,6 @@ class IP {
 	}
 
 	public static int compartTo(String ip1, String ip2) {
-
 		long[] ip11 = parseIp(ip1);
 		long[] ip22 = parseIp(ip2);
 		long ip1Result = 0, ip2Result = 0;

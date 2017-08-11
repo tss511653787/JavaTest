@@ -1,13 +1,25 @@
 package Review;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 public class ReflectReviw {
 	public static void main(String[] args) throws NoSuchMethodException,
 			SecurityException, IllegalAccessException,
-			IllegalArgumentException, InvocationTargetException {
+			IllegalArgumentException, InvocationTargetException,
+			FileNotFoundException {
 		int[] arr = new int[3];
 		arr[0] = 1;
 		arr[1] = 2;
@@ -15,6 +27,8 @@ public class ReflectReviw {
 		int[] newArr = (int[]) ArrcopyOfTest(arr, 5);
 		ReflectReviw a = new ReflectReviw();
 		System.out.println((int) invokeMethod(a, "testMethod", 1));
+
+		WC("C:\\Users\\Administrator\\Desktop\\a.txt");
 
 	}
 
@@ -45,5 +59,28 @@ public class ReflectReviw {
 			InvocationTargetException {
 		Method m = object.getClass().getMethod(methodName, int.class);
 		return m.invoke(null, args);
+	}
+
+	public static void WC(String filepath) throws FileNotFoundException {
+		File file = new File(filepath);
+		Scanner scan = new Scanner(file);
+		Map<String, Integer> map = new HashMap<>();
+		while (scan.hasNext()) {
+			String in = scan.next();
+			map.put(in, map.getOrDefault(in, 0) + 1);
+		}
+		List<Entry<String, Integer>> entrylist = new ArrayList<>(map.entrySet());
+		Collections.sort(entrylist, new Comparator<Entry<String, Integer>>() {
+
+			@Override
+			public int compare(Entry<String, Integer> o1,
+					Entry<String, Integer> o2) {
+				// TODO Auto-generated method stub
+				return -(o1.getValue() - o2.getValue());
+			}
+
+		});
+		entrylist.forEach(entry -> System.out.println(entry.getKey() + " "
+				+ entry.getValue()));
 	}
 }

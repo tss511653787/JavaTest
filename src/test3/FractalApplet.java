@@ -21,7 +21,6 @@ public class FractalApplet extends Applet {
 		// 调用递归
 		// 初始值
 		randomFractal(0, hight / 2, width, hight / 2, drawingArea);
-
 	}
 
 	@Override

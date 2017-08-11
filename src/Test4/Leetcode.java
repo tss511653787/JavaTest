@@ -136,7 +136,6 @@ public class Leetcode {
 			}
 			return width;
 		}
-
 	}
 
 	// 反转链表
@@ -208,7 +207,6 @@ public class Leetcode {
 		}
 		return is_subTree(root1, root2) || HasSubtree(root1.left, root2)
 				|| HasSubtree(root1.right, root2);
-
 	}
 
 	private boolean is_subTree(TreeNode root1, TreeNode root2) {
@@ -223,7 +221,6 @@ public class Leetcode {
 		} else {
 			return false;
 		}
-
 	}
 
 	// 给定二叉树求他的镜像
@@ -234,7 +231,6 @@ public class Leetcode {
 			Mirror(root.left);
 			Mirror(root.right);
 		}
-
 	}
 
 	// 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
@@ -270,7 +266,6 @@ public class Leetcode {
 	// 路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
 	public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
 		return null;
-
 	}
 
 	public static TreeNode findInTree(TreeNode root, int target) {

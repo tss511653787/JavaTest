@@ -28,9 +28,10 @@ public class IntDataNode {
 		this.link = link;
 	}
 
-	// 给链表头后面插入新节点
+	// *给链表尾部插入节点
 	public void InsetBeforeHead(int data) {
 		IntDataNode find = this;
+		// 后移寻找插入位置
 		while (find.getLink() != null) {
 			find = find.getLink();
 		}
@@ -190,6 +191,7 @@ public class IntDataNode {
 	}
 
 	// 删除一个节点中一个target的静态方法
+	// 返回值是头结点指针
 	public static IntDataNode deleteInList(IntDataNode head, int target) {
 		if (head == null)
 			return null;
@@ -203,9 +205,9 @@ public class IntDataNode {
 			while (ser.getLink() != null && ser.getLink().getData() != target) {
 				ser = ser.getLink();
 			}
-			// 不是最后一个节点
 			if (ser.getLink() == null) {
-				return null;
+				// 没有这个target值
+				return head;
 			} else {
 				ser.DeleteAfterNode();
 				return head;
@@ -244,6 +246,7 @@ public class IntDataNode {
 				return null;
 			} else {
 				ser.setData(head.getData());
+				// 返回头结点下一个节点
 				return head.getLink();
 			}
 		}
@@ -256,7 +259,7 @@ public class IntDataNode {
 		return listPosition(link, i).getData();
 	}
 
-	// 首位连接两个链表返回连接后的head
+	// 首尾连接两个链表返回连接后的head
 	public static IntDataNode addAll(IntDataNode a, IntDataNode b) {
 		// 复制a的副本copyA 返回副本的首节点
 		IntDataNode[] copyA = listCopyAll(a);

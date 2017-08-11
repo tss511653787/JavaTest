@@ -6,6 +6,9 @@ import java.util.Stack;
 //问题:没有实现超过1位的读取（只能个位数运算）
 
 public class StackEvalute {
+	/*
+	 * 该方法是适用于完全小括号表达式没有考虑的运算符优先级 完全括号表达式 eg：(((6.0+90)/3)*(6.0-4))
+	 */
 	public static double readAndEvalute(String input) {
 		if (input == null) {
 			return 0.0;

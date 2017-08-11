@@ -40,7 +40,7 @@ public abstract class Handler {
 		Handle3 h3 = new Handle3();
 		h1.setNexthandler(h2);
 		h2.setNexthandler(h3);
-		Request r = new Request(3);
+		Request r = new Request(2);
 		System.out.println(h1.handleMessage(r).getRes());
 	}
 }

@@ -32,7 +32,6 @@ public class ThreadPoolThink {
 		int call = res3.get();
 		// 无返回值
 		threadPool.execute(new RunImpl());
-
 	}
 }
 

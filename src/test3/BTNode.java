@@ -19,6 +19,7 @@ public class BTNode {
 		this.right = right;
 	}
 
+	// 默认的空节点构造器
 	public BTNode() {
 		super();
 	}
@@ -61,11 +62,12 @@ public class BTNode {
 		}
 	}
 
+	// 返回最右面元素
 	public Object getRightMostData() {
 		if (right == null) {
 			return data;
 		} else {
-			return left.getRightMostData();
+			return right.getRightMostData();
 		}
 	}
 
@@ -86,7 +88,7 @@ public class BTNode {
 		if (right == null)
 			return left;
 		else {
-			right = right.removeLeftMost();
+			right = right.removeRightMost();
 			return this;
 		}
 	}
@@ -126,7 +128,7 @@ public class BTNode {
 
 	// 二叉树的三种编列
 	public void preorderprint() {
-		System.out.println(data);
+		System.out.print(data + " ");
 		if (left != null) {
 			left.preorderprint();
 		}
@@ -155,7 +157,10 @@ public class BTNode {
 		System.out.println(data);
 	}
 
+	// 可显示节点位置的中序遍历
+	// 可以手动画出树
 	public void AnewPreorderprint() {
+		// 根绝深度进行空格
 		for (int i = 0; i < deep(this); i++) {
 			System.out.print(" ");
 		}
@@ -218,7 +223,7 @@ public class BTNode {
 				if (!stk.isEmpty()) {
 					BTNode out = stk.pop();
 					if (out.isFirst) {
-						// 发现是第一个出栈
+						// 发现是第一次出栈
 						out.isFirst = false;
 						stk.push(out);
 						p = out.getRight();
