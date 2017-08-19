@@ -14,5 +14,4 @@ public class MyClassLoader extends ClassLoader {
 		return super.findClass(name);
 		// mycode
 	}
-
-}
+} 

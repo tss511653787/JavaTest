@@ -1,6 +1,7 @@
 package Wangyi;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,6 +26,21 @@ public class XiaoYiCorrect {
 		}
 		List<List<Integer>> distance = new ArrayList<List<Integer>>();
 		couuntDis(Xarr, Yarr, distance);
+		// 从1->n遍历
+		for (int i = 1; i <= num; i++) {
+			int minRes = Integer.MAX_VALUE;
+			for (List<Integer> list : distance) {
+				int min = 0;
+				for (int j = 0; j < i; j++) {
+					min += list.get(j);
+				}
+				minRes = Math.min(minRes, min);
+			}
+			System.out.print(minRes);
+			if (i != num) {
+				System.out.print(" ");
+			}
+		}
 
 	}
 
@@ -35,9 +51,11 @@ public class XiaoYiCorrect {
 			for (int j = 0; j < yarr.length; j++) {
 				List<Integer> dis = new ArrayList<>();
 				for (int m = 0; m < xarr.length; m++) {
-					dis.add((int) (Math.abs(xarr[m] - xarr[i])
-							+ Math.abs(yarr[m] - yarr[j])));
+					dis.add((int) (Math.abs(xarr[m] - xarr[i]) + Math
+							.abs(yarr[m] - yarr[j])));
 				}
+				Collections.sort(dis);
+				distance.add(dis);
 			}
 		}
 	}
