@@ -1,11 +1,15 @@
 package DynamicProgramming;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /*
  * 动态规划练习
  * */
 public class DaoDan {
+	static Set<String> outMaxLenSet = new HashSet<>();
+
 	public static void main(String[] args) {
 		findMaxLenTest();
 	}
@@ -51,17 +55,20 @@ public class DaoDan {
 	public static void findMaxLenTest() {
 		Scanner scanner = new Scanner(System.in);
 		String[] in = scanner.nextLine().split("\\s+");
+		scanner.close();
 		char[] arrA = in[0].toCharArray();
 		char[] arrB = in[1].toCharArray();
-		System.out.println(findMaxLen(arrA, arrB));
-		scanner.close();
+		int[][] maxLen = findMaxLen(arrA, arrB);
+		System.out.println(maxLen[arrA.length][arrB.length]);
+		outPutMaxLen(maxLen, arrA, arrB, arrA.length, arrB.length, "");
+		outMaxLenSet.forEach(res -> System.out.println(res));
 	}
 
 	/*
 	 * 进阶：求A B 两个数组的最长公共子序列 要求：给出两个字符串，求出这样的一个最长的公共子序列的长度： 子序列中的每个字符都能在两个原串中找到，
 	 * 而且每个字符的先后顺序和原串中的先后顺序一致 子序列不一定连续
 	 */
-	public static int findMaxLen(char[] arrA, char[] arrB) {
+	public static int[][] findMaxLen(char[] arrA, char[] arrB) {
 		int lenA = arrA.length;
 		int lenB = arrB.length;
 		int[][] maxLen = new int[lenA + 1][lenB + 1];
@@ -81,12 +88,40 @@ public class DaoDan {
 				}
 			}
 		}
-		return maxLen[lenA][lenB];
+		return maxLen;
 	}
 
 	public static int Max(int i, int j) {
 		// TODO Auto-generated method stub
 		return i > j ? i : j;
+	}
+
+	/*
+	 * 扩展：输出连个序列的最长公共子序列 (len1是1串的状态长度=本身长度+1)
+	 */
+	public static void outPutMaxLen(int[][] maxLen, char[] arrA, char[] arrB,
+			int len1, int len2, String res) {
+		while (len1 > 0 && len2 > 0) {
+			// 当前回溯的字符相等的情况 则向斜上方回溯
+			if (arrA[len1 - 1] == arrB[len2 - 1]) {
+				res += arrA[len1 - 1];
+				len1--;
+				len2--;
+			} else {
+				// 不相等情况
+				if (maxLen[len1 - 1][len2] > maxLen[len1][len2 - 1]) {
+					len1--;
+				} else if (maxLen[len1 - 1][len2] < maxLen[len1][len2 - 1]) {
+					len2--;
+				} else {
+					// 旁边两个状态都相等 说明有多个最长公共子序列 则都要回溯
+					outPutMaxLen(maxLen, arrA, arrB, len1 - 1, len2, res);
+					outPutMaxLen(maxLen, arrA, arrB, len1, len2 - 1, res);
+					return;
+				}
+			}
+		}
+		outMaxLenSet.add(new StringBuilder(res).reverse().toString());
 	}
 
 }

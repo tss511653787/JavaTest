@@ -1,6 +1,8 @@
 package JDTest;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -25,6 +27,13 @@ public class Main {
 		answer = Cc * Psum;
 		DecimalFormat df = new DecimalFormat("0.00000");
 		System.out.println(df.format(answer));
+
+	}
+
+	private static Object func(Integer x) {
+		// TODO Auto-generated method stub
+		x++;
+		return null;
 	}
 
 	public static int A(int low, int hight) {
