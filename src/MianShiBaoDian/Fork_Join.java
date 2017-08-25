@@ -45,7 +45,7 @@ class Counter extends RecursiveTask<Integer> {
 	protected Integer compute() {
 		// TODO Auto-generated method stub
 		if (to - from < THRESHOLD) {
-			// 长度小雨阈值 直接处理
+			// 长小于阈值阈值 直接处理
 			int count = 0;
 			for (int i = from; i < to; i++) {
 				if (filter.test(values[i]))

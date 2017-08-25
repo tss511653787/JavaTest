@@ -32,6 +32,7 @@ public class ReflectReviw {
 
 	}
 
+	// 待调用方法
 	public static int testMethod(int a) {
 		return a + 1;
 	}

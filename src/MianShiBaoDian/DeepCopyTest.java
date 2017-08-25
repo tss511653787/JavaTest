@@ -1,7 +1,7 @@
 package MianShiBaoDian;
 
 /*
- * 对比前拷贝和神拷贝的区别
+ * 对比浅拷贝和深拷贝的区别
  * */
 
 public class DeepCopyTest {

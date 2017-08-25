@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 import java.text.Format;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
@@ -14,7 +13,7 @@ public class BaiDu_1 {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		interestingSort();
+		encoed();
 	}
 
 	/*
@@ -154,6 +153,25 @@ public class BaiDu_1 {
 		if (sum > max)
 			max = sum;
 		System.out.print(num - max);
+	}
+
+	/*
+	 * 不等式数列
+	 */
+	public static void encoed() {
+		String str = scanner.nextLine();
+		int len = str.length();
+		// initail
+		int index = len - 1;
+		int[] factor = {
+				(int) Math.pow(25, 3) + (int) Math.pow(25, 2)
+						+ (int) Math.pow(25, 1) + 1,
+				(int) Math.pow(25, 2) + (int) Math.pow(25, 1) + 1,
+				(int) Math.pow(25, 1) + 1, 1 };
+		for (int i = 0; i < len; i++) {
+			index += factor[i] * (str.charAt(i) - 'a');
+		}
+		System.out.print(index);
 	}
 }
 

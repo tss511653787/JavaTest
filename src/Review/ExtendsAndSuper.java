@@ -31,14 +31,15 @@ public class ExtendsAndSuper {
 		redapples.add(new RedApple());
 		// 但是get不可行 因为下界是redapple不知道实际存放的是redapple的哪个父类
 		// RedApple a = redapples.get(0);
-
 	}
 }
 
 class RedApple extends Apple {
+
 	/*
 	 * 红苹果类
 	 */
+	
 }
 
 class Apple extends Fruit {

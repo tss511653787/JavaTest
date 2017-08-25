@@ -2,6 +2,7 @@ package Wangyi;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,6 +15,26 @@ import java.util.Scanner;
  */
 public class XiaoYiCorrect {
 	public static void main(String[] args) {
+		long[] arr = new long[50];
+		FeiBoNaQie(arr);
+		for (int i = 0; i < 50; i++) {
+			System.out.println(arr[i]);
+		}
+	}
+
+	// 这就是一个最简单的动态规划
+	public static void FeiBoNaQie(long[] arr) {
+		int len = arr.length;
+		for (int i = 0; i < len; i++) {
+			if (i == 0 || i == 1) {
+				arr[i] = 1;
+			} else {
+				arr[i] = arr[i - 1] + arr[i - 2];
+			}
+		}
+	}
+
+	public static void QiPan() {
 		Scanner scan = new Scanner(System.in);
 		int num = Integer.parseInt(scan.nextLine());
 		String[] Xin = scan.nextLine().split("\\ ");
@@ -41,7 +62,6 @@ public class XiaoYiCorrect {
 				System.out.print(" ");
 			}
 		}
-
 	}
 
 	public static void couuntDis(long[] xarr, long[] yarr,
@@ -59,4 +79,5 @@ public class XiaoYiCorrect {
 			}
 		}
 	}
+
 }
