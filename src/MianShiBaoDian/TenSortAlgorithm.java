@@ -118,22 +118,22 @@ public class TenSortAlgorithm {
 
 	}
 
-	private static int quicksort(int[] arr, int low, int hight) {
+	private static int quicksort(int[] arr, int low, int high) {
 		// TODO Auto-generated method stub
 		// 将第一个数作为target标志
 		int targrt = arr[low];
-		while (low < hight) {
-			while (arr[hight] >= targrt) {
-				hight--;
+		while (low < high) {
+			while ((low < high) && (arr[high] >= targrt)) {
+				high--;
 			}
-			arr[low] = arr[hight];
-			while (arr[low] < targrt) {
+			arr[low] = arr[high];
+			while ((low < high) && (arr[low] < targrt)) {
 				low++;
 			}
-			arr[hight] = arr[low];
+			arr[high] = arr[low];
 		}
-		arr[hight] = targrt;
-		return hight;
+		arr[high] = targrt;
+		return high;
 	}
 
 	// 归并排序

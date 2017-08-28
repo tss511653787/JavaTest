@@ -78,6 +78,7 @@ public class XiaoYiCorrect {
 				distance.add(dis);
 			}
 		}
+		System.out.println();
 	}
 
 }
