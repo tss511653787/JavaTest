@@ -40,6 +40,5 @@ public class ProGram_1 {
 			l++;
 		}
 		list.forEach(x -> System.out.print(x + " "));
-
 	}
 }

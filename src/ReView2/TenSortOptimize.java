@@ -1,5 +1,7 @@
 package ReView2;
 
+import java.util.Stack;
+
 /*
  * 常见比较排序和非比较排序的优化整理
  * 比较：选择 冒泡 快排 归并 插入 希尔 堆 二叉树 
@@ -9,16 +11,17 @@ public class TenSortOptimize {
 	// test
 	public static void main(String[] args) {
 		int[] small = { 0, 100, 5, 17, 19, 33, 4, 2 };
-		int[] arr = new int[100];
-		for (int i = 0; i < 100; i++) {
+		int n = 100000;
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) {
 			arr[i] = (int) (Math.random() * 100);
 		}
 		// 对数器验证
-		int[] copy = new int[100];
-		System.arraycopy(arr, 0, copy, 0, 100);
+		int[] copy = new int[n];
+		System.arraycopy(arr, 0, copy, 0, n);
 		intsertSort(arr);
-		shellSort(copy);
-		for (int i = 0; i < 100; i++) {
+		easyBucketSort(copy);
+		for (int i = 0; i < n; i++) {
 			if (arr[i] != copy[i]) {
 				System.out.print("wrong");
 				break;
@@ -252,5 +255,107 @@ public class TenSortOptimize {
 				}
 			}
 		}
+	}
+
+	// 二叉树排序算法：其思想就是用过一个BST(二叉搜索书进行插入) 结果就是中序遍历结果
+	public static void BSTsort(int[] array) {
+		if (array.length == 1) {
+			return;
+		}
+		BST root = new BST(array[0], null, null);
+		BST p = root;
+		int len = array.length;
+		// insert
+		for (int i = 1; i < len; i++) {
+			int target = array[i];
+			while (true) {
+				if (p.data >= target) {
+					// left
+					if (p.left != null) {
+						p = p.left;
+					} else {
+						p.left = new BST(target, null, null);
+						p = root;
+						break;
+					}
+				} else {
+					if (p.right != null) {
+						p = p.right;
+					} else {
+						p.right = new BST(target, null, null);
+						p = root;
+						break;
+					}
+				}
+			}
+		}
+		int[] copy = inOrderPrint(root, len);
+		for (int i = 0; i < len; i++) {
+			array[i] = copy[i];
+		}
+	}
+
+	public static int[] inOrderPrint(BST root, int len) {
+		int[] res = new int[len];
+		int i = 0;
+		Stack<BST> stk = new Stack<>();
+		BST p = root;
+		while (p != null || !stk.isEmpty()) {
+			while (p != null) {
+				stk.push(p);
+				p = p.left;
+			}
+			if (!stk.isEmpty()) {
+				BST out = stk.pop();
+				res[i++] = out.data;
+				p = out.right;
+			}
+		}
+		return res;
+	}
+
+	// 桶排序
+	// 一个全部值全建立数组的特殊实现 时间复杂度O(n) 但是空间复杂度是max-min
+	public static void easyBucketSort(int[] arr) {
+		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
+		for (int n : arr) {
+			max = max > n ? max : n;
+			min = min < n ? min : n;
+		}
+		int len = max - min + 1;
+		int[] bucket = new int[len];
+		// initail 0
+		for (int x : arr) {
+			bucket[x - min]++;
+		}
+		int[] copy = new int[arr.length];
+		int j = 0;
+		for (int i = 0; i < len; i++) {
+			if (bucket[i] != 0) {
+				int num = bucket[i];
+				while (num > 0) {
+					copy[j++] = i + min;
+					num--;
+				}
+			}
+		}
+		// copy
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = copy[i];
+		}
+	}
+}
+
+class BST {
+	int data;
+	BST left;
+	BST right;
+
+	public BST(int data, BST left, BST right) {
+		super();
+		this.data = data;
+		this.left = left;
+		this.right = right;
 	}
 }
