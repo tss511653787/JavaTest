@@ -26,6 +26,10 @@ public class Fork_Join {
 }
 
 class Counter extends RecursiveTask<Integer> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static final int THRESHOLD = 1000;
 	private double[] values;
 	private int from;

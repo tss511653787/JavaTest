@@ -21,8 +21,8 @@ public class SocketServer {
 		 * ThreadPoolCode?
 		 */
 		while (true) {
-			Socket soc = soServerSocket.accept();
 			System.out.println("Start Listening...");
+			Socket soc = soServerSocket.accept();
 			Thread t = new Thread(new Server(soc));
 			t.start();
 		}
@@ -48,6 +48,7 @@ class Server implements Runnable {
 			System.out.println("Connect success from:"
 					+ incoming.getRemoteSocketAddress());
 		}
+		
 		try {
 			inputStream = incoming.getInputStream();
 			outputStream = incoming.getOutputStream();

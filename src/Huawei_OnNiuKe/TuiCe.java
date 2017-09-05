@@ -24,5 +24,4 @@ public class TuiCe<T> {
 		System.out.println(fullName.map(s -> "Hey " + s + "!").orElse(
 				"Hey Stranger!"));
 	}
-
 }

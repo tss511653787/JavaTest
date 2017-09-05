@@ -1,5 +1,8 @@
 package ReView2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
 
 /*
@@ -20,7 +23,7 @@ public class TenSortOptimize {
 		int[] copy = new int[n];
 		System.arraycopy(arr, 0, copy, 0, n);
 		intsertSort(arr);
-		easyBucketSort(copy);
+		JiShuSort(copy);
 		for (int i = 0; i < n; i++) {
 			if (arr[i] != copy[i]) {
 				System.out.print("wrong");
@@ -344,6 +347,53 @@ public class TenSortOptimize {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = copy[i];
 		}
+	}
+
+	// 基数排序
+	public static void JiShuSort(int[] arr) {
+		List<Integer> list = new ArrayList<>();
+		for (int n : arr) {
+			list.add(n);
+		}
+		// 桶
+		ArrayList[] buckets = new ArrayList[10];
+		for (int i = 0; i < 10; i++) {
+			buckets[i] = new ArrayList<Integer>();
+		}
+		int max = Collections.max(list);
+		String maxS = String.valueOf(max);
+		int len = maxS.length();
+		for (int i = 0; i < len; i++) {
+			// 分散
+			for (int num : list) {
+				int p = TiQu(num, i);
+				buckets[p].add(num);
+			}
+			// 收集
+			List<Integer> temp = new ArrayList<>();
+			for (int m = 0; m < 10; m++) {
+				if (buckets[m].size() != 0) {
+					for (int j = 0; j < buckets[m].size(); j++) {
+						temp.add((Integer) buckets[m].get(j));
+					}
+					buckets[m].clear();
+				}
+			}
+			list.clear();
+			list.addAll(temp);
+		}
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = list.get(i);
+		}
+	}
+
+	public static int TiQu(int num, int i) {
+		// TODO Auto-generated method stub
+		int chu = 1;
+		for (int j = 0; j < i; j++) {
+			chu *= 10;
+		}
+		return (num / chu) % 10;
 	}
 }
 

@@ -5,7 +5,6 @@ package test1;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -56,7 +55,6 @@ public class SerializeDemo {
 		ObjectInputStream in = new ObjectInputStream(filein);
 		Employee e = (Employee) in.readObject();
 		System.out.println(e);
-
 	}
 
 }

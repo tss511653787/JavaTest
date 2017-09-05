@@ -1,6 +1,10 @@
 package test1;
 
 public class Employee implements java.io.Serializable, Cloneable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9189266776588422836L;
 	// 可以序列话的属性
 	public String id;
 	public String name;

@@ -37,7 +37,7 @@ public class ReflectReviw {
 		return a + 1;
 	}
 
-	// 利用反射对数组进行扩展的GoodCopy方法F
+	// 利用反射对数组进行扩展的GoodCopy方法
 	// 加入数组(任何对象)已满 扩充到newLength长度
 	public static Object ArrcopyOfTest(Object a, int newLength) {
 		Class c = a.getClass();
@@ -62,6 +62,10 @@ public class ReflectReviw {
 		return m.invoke(null, args);
 	}
 
+	/*
+	 * 
+	 * 这里怎么会出现一个WC？
+	 */
 	public static void WC(String filepath) throws FileNotFoundException {
 		File file = new File(filepath);
 		Scanner scan = new Scanner(file);

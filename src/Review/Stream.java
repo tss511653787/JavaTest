@@ -33,6 +33,7 @@ public class Stream {
 		reader.close();
 	}
 
+	@SuppressWarnings("unused")
 	private static void ScanFile(String filePath) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(new File(filePath));
@@ -60,7 +61,6 @@ public class Stream {
 		byte[] out = res.getBytes();
 		outputStream.write(out);
 		outputStream.close();
-
 	}
 
 	private static void WriterOut(String filePath, String in)

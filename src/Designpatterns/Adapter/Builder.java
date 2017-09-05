@@ -18,7 +18,6 @@ public abstract class Builder {
 		DIYComputer com = director.createAdiyComputer("i7 7700k", "Z270",
 				"DDDR4 32G");
 		System.out.println(com);
-
 	}
 }
 
