@@ -1,5 +1,7 @@
 package ReView2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -21,6 +23,8 @@ public class MakeBst {
 		Node root = null;
 		root = make(root, 0, len - 1, arr);
 		inorder(root);
+		System.out.println();
+		PathPrint(root);
 	}
 
 	public static void inorder(Node root) {
@@ -49,6 +53,27 @@ public class MakeBst {
 			p.right = make(p.right, mid + 1, high, arr);
 		}
 		return p;
+	}
+
+	public static void PathPrint(Node root) {
+		Node p = root;
+		List<Node> list = new ArrayList<Node>();
+		Path(p, list);
+	}
+
+	public static void Path(Node p, List<Node> list) {
+		// TODO Auto-generated method stub
+		if (p == null)
+			return;
+		list.add(p);
+		if (p.left == null && p.right == null) {
+			// out
+			list.forEach(x -> System.out.print(x.data + " "));
+			System.out.println();
+		}
+		Path(p.left, list);
+		Path(p.right, list);
+		list.remove(list.size() - 1);
 	}
 
 }

@@ -1,9 +1,12 @@
 package ClassLoaderDome;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import test1.findNum;
 
 public class VolatileTest {
 	public static volatile int race = 0;
+	static AtomicInteger num = new AtomicInteger(0);
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -26,10 +29,12 @@ public class VolatileTest {
 			Thread.yield();
 		}
 		System.out.println(race);
+		System.out.println(num);
 	}
 
 	public static void increase() {
 		race++;
+		num.incrementAndGet();
 	}
 
 	private static final int THREADS_COUNT = 20;
