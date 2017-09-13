@@ -8,7 +8,9 @@ public class LinkedList {
 		System.out.println();
 		ListNode r = reverse2(head);
 		out(r);
-		
+		System.out.println();
+		XiPai();
+
 	}
 
 	public static void out(ListNode head) {
@@ -65,6 +67,40 @@ public class LinkedList {
 		head.next.next = new ListNode(2, null);
 		head.next.next.next = new ListNode(1, null);
 		return head;
+	}
+
+	/*
+	 * 给定一个降序排列的数组 输出一种排列为：最小值，最大值，次小值，次大值 这样的数组排列 思路：奇数位置是原来数组的[i/2]
+	 * 偶数位置是原来数组的[n-1-i/2] 时间复杂度O(n) 空间复杂度O(1)
+	 */
+	public static void XiPai() {
+		int[] arr = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int len = arr.length;
+		int temp;
+		// 输出模式
+		int k = 0;
+		int p = len - 1;
+		for (int i = 0; i < len; i++) {
+			if (i % 2 == 0) {
+				System.out.print(arr[p--] + " ");
+			} else {
+				System.out.print(arr[k++] + " ");
+			}
+		}
+		// for (int i = 0; i < len; i++) {
+		// if (i % 2 != 0) {
+		// temp = arr[i];
+		// arr[i] = arr[i / 2];
+		// arr[i / 2] = temp;
+		// } else {
+		// temp = arr[i];
+		// arr[i] = arr[len - 1 - i / 2];
+		// arr[len - 1 - i / 2] = temp;
+		// }
+		// }
+		// for (int j = 0; j < len; j++) {
+		// System.out.print(arr[j] + " ");
+		// }
 	}
 
 }
