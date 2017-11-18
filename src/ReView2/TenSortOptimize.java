@@ -23,7 +23,7 @@ public class TenSortOptimize {
 		int[] copy = new int[n];
 		System.arraycopy(arr, 0, copy, 0, n);
 		intsertSort(arr);
-		JiShuSort(copy);
+		HeapSort(copy);
 		for (int i = 0; i < n; i++) {
 			if (arr[i] != copy[i]) {
 				System.out.print("wrong");
@@ -152,42 +152,69 @@ public class TenSortOptimize {
 		return high;
 	}
 
-	// 堆排序
+	/*
+	 * 2017.9.27 更新堆排序代码 以前堆排序代码错误 关于堆排序时间复杂度的讨论
+	 */
 	// 大顶堆
+
 	public static void HeapSort(int[] arr) {
-		int temp;
 		int len = arr.length;
-		int j = len - 1;
-		while (j > 0) {
-			makeHeap(arr, j);
-			temp = arr[0];
-			arr[0] = arr[j];
-			arr[j] = temp;
-			j--;
+		// 建堆顺序:从前向后建堆
+		for (int i = 0; i < len; i++) {
+			makeHeap(arr, i);
+		}
+		// 调堆 顺序：从后至前调堆
+		for (int j = len - 1; j > 0; j--) {
+			swap(arr, 0, j);
+			heapify(arr, 0, j);
 		}
 	}
 
-	public static void makeHeap(int[] arr, int j) {
+	public static void heapify(int[] arr, int start, int end) {
 		// TODO Auto-generated method stub
-		int temp;
-		// k>0对顶部不用加入调整
-		for (int k = j; k > 0; k--) {
-			if (k % 2 == 0) {
-				// 右孩子
-				if (arr[k] > arr[k / 2 - 1]) {
-					temp = arr[k];
-					arr[k] = arr[k / 2 - 1];
-					arr[k / 2 - 1] = temp;
-				}
+		// 从start位置调堆 一直到end位置
+		// 用large标志当前节点和孩子节点中的最大位置
+		int large = start;
+		int left = start * 2 + 1;
+		int right = start * 2 + 2;
+		while (left < end) {
+			if (arr[left] > arr[start]) {
+				large = left;
+			}
+			if (right < end && arr[right] > arr[large]) {
+				large = right;
+			}
+			if (start != large) {
+				swap(arr, start, large);
 			} else {
-				// 左孩子
-				if (arr[k] > arr[k / 2]) {
-					temp = arr[k];
-					arr[k] = arr[k / 2];
-					arr[k / 2] = temp;
-				}
+				break;
+			}
+			start = large;
+			left = start * 2 + 1;
+			right = start * 2 + 2;
+		}
+	}
+
+	public static void makeHeap(int[] arr, int i) {
+		// TODO Auto-generated method stub
+		int parent;
+		while (i != 0) {
+			parent = (i - 1) / 2;
+			if (arr[i] > arr[parent]) {
+				swap(arr, i, parent);
+				i = parent;
+			} else {
+				break;
 			}
 		}
+	}
+
+	public static void swap(int[] arr, int i, int j) {
+		// TODO Auto-generated method stub
+		int temp = 0;
+		temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 
 	// 归并
