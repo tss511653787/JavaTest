@@ -7,10 +7,10 @@ public class ProGram1 {
     static Model[] items;
     static int boxMinNum;
 
+
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         BoxTemplate boxTemplate = new BoxTemplate();
-
         boxTemplate.price = CUSTOMS_LIMIT_MONEY_PER_BOX;
 
         while (scanner.hasNext()) {
