@@ -18,6 +18,7 @@ public class Fork_Join {
 			numbers[i] = Math.random();
 		}
 		// 在fork-join框架中执行
+		//检查数组中元素大于0.5的个数
 		Counter count = new Counter(numbers, 0, SIZE, x -> x > 0.5);
 		ForkJoinPool pool = new ForkJoinPool();
 		pool.invoke(count);
