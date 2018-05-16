@@ -62,7 +62,7 @@ public class Test {
 
 	private static int findSmall(int answer, int n1, int n2, int n3, int deep) {
 		// TODO Auto-generated method stub
-
+		//结束条件
 		if (deep == 0) {
 			return 0;
 		}
