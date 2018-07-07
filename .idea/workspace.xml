@@ -1,236 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc05e2e6-eaaa-47fe-be65-5fb0f866ade1" name="Default" comment="tianshenshen 5/3">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cc05e2e6-eaaa-47fe-be65-5fb0f866ade1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AiQiyi/BigInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AiQiyi/SSR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Alibaba_2018/ProGram1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Alibaba_NeiTui/FindMax.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BigData/BigSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BigData/LittleHeap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BigData/in.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChuZhong/Qiao_Seven.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClassLoaderDome/ClassLoaderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClassLoaderDome/ReorderInVolatile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClassLoaderDome/VolatileTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/AbstractFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Adapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Builder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Decoration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/DynamicProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Facade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Factory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/FanXing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/FlyWeight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Iterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Mediator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Proxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Singleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/StaticFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Strategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Designpatterns/Adapter/Template.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiDi/pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiDi/pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Bag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/DaoDan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/HeChangDui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/Perfectshuffle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DynamicProgramming/SanJiaoXing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Echart/7daysAll.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Echart/EChart_3.0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Echart/WordCloud.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Echart/echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph/Graph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/CollableFutureThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Compara.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/HasNext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/HuaWei.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/IPsorted.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/LastYearHuaWei.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/LittleBall.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/MicroSoft.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/New.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/NiuKe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/NiuKe2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/NiuKe3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/NiuKe4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/NiuKeStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Niuke5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Niuke6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Niuke7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Ptreetest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/RobotInMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Son.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/Toutiao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/TreePath.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/WangyiBiShi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWeiTest/findPathInMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWei_8_30/PiYin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HuaWei_8_30/Pro_2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/Bag_Problem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/FindTheMedian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/Huawei02.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/Huawei1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/Inputdata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/LastWordLenth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/Main2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/NativeMethodTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/NativeMethodTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/PointMove.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/RepeatAnnotations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/ShoppingListBagProblem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Huawei_OnNiuKe/TuiCe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JDTest/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JDTest/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JD_9/Chrome45.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JD_9/pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JD_9/pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JD_9/pro22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LianJia/Pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LianJia/Pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LianJia/Pro3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeiTaun/DianDeng.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeiTaun/InsertHui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeiTaun/Seven.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeiTuan/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeiTuan/Pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/ArraySort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/CharCount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/CloneUseSerivalizable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/ConcurrentCollectionIn8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/DeepCopyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/DiGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Finalize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Fork_Join.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/FuZhiCaoZuo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/GetJavaWebUseSocket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/HashCodeClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/InputStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/J.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/JavaThreadPoolExtend.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Nio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/PermGenTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/SeachInDictonary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Singleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/StringAndArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/SynchronizedSell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/TenSortAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/Tets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/ThreadTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MianShiBaoDian/genericTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NiuKeBook/BaiDu_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NiuKeBook/JD_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PinDuoDuo/ProGram3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PinDuoDuo/p2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNa/DFS_Z.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNa/Six.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNa/dfs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNa/pro22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNa/qimo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNai/AZjinzhi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNai/Min2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNai/MinLength.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNai/Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/QuNai/XiaoXi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/CatchException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/DataOutPut.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/FinallyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/HanShuInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/LinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/MakeBst.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/Pair.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/Stack_Heap_ADT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/TenSortOptimize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReView2/_58.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RedBook/MiMa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RedBook/pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RedBook/pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RenRen/ChunWanProblem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RenRen/littleB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/BSTmake.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ClassTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/CollectionTransToArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/CucurrentSer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/CurrentInHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/EnumSetAndEnumMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ExtendsAndSuper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/HashMapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/JVM_Stack_ConstantPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/LambdaInAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/MyClassLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/NestedClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/PriorityQueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ReflectReviw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ReviewHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/StaticBlockAndnoStaticBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/Stream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/SubClassExtendsFather.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/TheadLocalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ThreadInterrupt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ThreadPoolThink.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ThreadTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/TwoStackCaculate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/TwoStackImlpQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/UnException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Review/ttt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sina/Time_Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sina/TuiXiangSi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sina/pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SocketTest/ClientSocket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SocketTest/SocketServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution6/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution6/MyLCS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution8/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution8/MyLCS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SouHu/ProGram_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TX/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TX/sortNum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/AssertTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/Leetcode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/NiuKe2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ObjectSerializable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ProducerAndConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ReflecttionLibrary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/SynchronizedBank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ThinkInJava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ThreadLocalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test4/ThreadPoolExecuterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test5/BagTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test5/CollectionFramework.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test5/InnerClassTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test5/LambdaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test5/TempIntNum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/KangSiLu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/QuJian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/SamaArr2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/SameArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/Test_8_22.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/Uid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/XingShiHua.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toutiao/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TreeAlgorithm/BTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/EatFruit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/NiXuSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/Program_1_4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/XiaoYiCorrect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wangyi/xiaoyi1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XieCheng/QQLiaoTian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XieCheng/pro1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XieCheng/pro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XieCheng/pro3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ZTE/BulbMin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AiQiyi/BigInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AiQiyi/BigInt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AiQiyi/SSR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AiQiyi/SSR.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java" afterDir="false" />
@@ -500,60 +275,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/test3/TreeBagSou.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test3/TreeBagSou.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test3/TreeInJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test3/TreeInJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/test3/TreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test3/TreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/Find.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/Solution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/ArrayTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/CallableFutureThreadTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/Client_Socket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/EnumerationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/GeneriesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/HashTableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/MatCC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/Properites.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/RegexTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/RunnableDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/RunnableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/SerializeDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/SetAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/Sever_Socket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/ThreadExtendDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/ThreadPoolTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/VectorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test1/findNum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/ArrayListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/ConverStr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/Father.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/IPsorted.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/IntDataNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/IntDataNodeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/IntQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/IntStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/Javaobject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/OverLoading_OverRidding.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/PriorityQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/QueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/RemoveSpace.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/StackEvalute.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/pow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test2/test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/BTNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/FractalApplet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/Graph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/GraphTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/HeapADT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/HeapElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/HeapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/MyHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/MyHashMapNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/MyHashMapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/RecursiveApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/SearchCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/Sort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/TreeBagSou.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/TreeInJava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test3/TreeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test1.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -575,11 +296,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pro1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pro1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/JD_9/pro1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="264">
+              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -587,7 +317,7 @@
       <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="550">
               <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
             </state>
           </provider>
@@ -605,8 +335,8 @@
       <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
+            <state relative-caret-position="2486">
+              <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -621,10 +351,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Alibaba_2018/ProGram1.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test4/NiuKe2.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java" />
         <option value="$PROJECT_DIR$/src/main/java/JD_9/pro1.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -641,6 +371,12 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
@@ -649,14 +385,16 @@
     <option name="width" value="1440" />
     <option name="height" value="803" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -683,6 +421,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -801,6 +540,9 @@
       <workItem from="1525360356348" duration="1564000" />
       <workItem from="1525439610385" duration="147000" />
       <workItem from="1525446651851" duration="826000" />
+      <workItem from="1525449042021" duration="299000" />
+      <workItem from="1529763108031" duration="43000" />
+      <workItem from="1530921546560" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="tianshenshen 5/3">
       <created>1525360788965</created>
@@ -809,14 +551,22 @@
       <option name="project" value="LOCAL" />
       <updated>1525360788965</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tianshenshen 5/3">
+      <created>1525449148425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525449148425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4128000" />
+    <option name="totallyTimeSpent" value="5061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="803" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -824,28 +574,28 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297568" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32868218" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18097281" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1874106" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24964234" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3534884" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -859,6 +609,76 @@
     <option name="LAST_COMMIT_MESSAGE" value="tianshenshen 5/3" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JD_9/pro1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2442">
+          <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JD_9/pro1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Alibaba_2018/ProGram1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -971,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/QuNai/XiaoXi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -1050,10 +863,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
+        <state relative-caret-position="550">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1064,17 +877,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Stack.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        <state relative-caret-position="2486">
+          <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JD_9/pro1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="264">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
         </state>
       </provider>
     </entry>
