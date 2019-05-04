@@ -43,7 +43,7 @@ public class tes1 {
     }
 
     //中序编列二叉树
-    private static void printTree(TreeNode p) {
+    public static void printTree(TreeNode p) {
         Stack<TreeNode> stack = new Stack<>();
         while (null != p || !stack.isEmpty()) {
             if (null != p) {
@@ -340,6 +340,15 @@ class TreeNode {
 
     public void setIsout(boolean isout) {
         this.isout = isout;
+    }
+
+    public TreeNode deleteMostRight() {
+        if (rightChild == null) {
+            return leftChild;
+        } else {
+            rightChild = rightChild.deleteMostRight();
+            return this;
+        }
     }
 }
 

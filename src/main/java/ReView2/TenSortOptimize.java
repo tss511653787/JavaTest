@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /*
  * 常见比较排序和非比较排序的优化整理
- * 比较：选择 冒泡 快排 归并 插入 希尔 堆 二叉树 
+ * 比较：选择 冒泡 快排 归并 插入 希尔 堆 二叉树
  * 非比较：基数 计数 桶排
  * */
 public class TenSortOptimize {
@@ -420,8 +420,8 @@ public class TenSortOptimize {
 		for (int j = 0; j < i; j++) {
 			chu *= 10;
 		}
-		return (num / chu) % 10;
-	}
+        return Math.abs((num / chu) % 10);
+    }
 }
 
 class BST {
