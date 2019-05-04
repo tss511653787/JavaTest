@@ -28,6 +28,7 @@ public class pro1 {
 				}
 			}
 		}
+		
 		System.out.println(count);
 	}
 }
