@@ -81,7 +81,7 @@ public class tes1 {
         }
     }
 
-    private static TreeNode makeTreeWithDeep(int deep) {
+    public static TreeNode makeTreeWithDeep(int deep) {
         int[] num = new int[(int) Math.pow(2, deep) - 1];
         for (int i = 0; i < num.length; i++) {
             num[i] = i + 1;
@@ -89,7 +89,7 @@ public class tes1 {
         return makeTree(null, num, 0, num.length - 1);
     }
 
-    private static TreeNode makeTree(TreeNode p, int[] num, int low, int high) {
+    public static TreeNode makeTree(TreeNode p, int[] num, int low, int high) {
         if (low > high) {
             return null;
         } else {
