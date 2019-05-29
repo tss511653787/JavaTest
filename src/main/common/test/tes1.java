@@ -1,24 +1,13 @@
 package test;
 
-import java.lang.annotation.Target;
 import java.util.*;
 
-import static ReView2.TenSortOptimize.JiShuSort;
 
 public class tes1 {
 
     public static void main(String[] args) {
-        //输出二叉树跟到叶子的全部路径
-//        lastPrintTree(initTestTree());
-        //给定深度建个满二叉树
-//        TreeNode root = makeTreeWithDeep(4);
-//        printTree(root);
-//        System.out.println(makeTreeNumDeep(4, 1, 5, 217));
         int[] nums = {2, 8, -1, 90, 11, 31, 53, 12, 32};
-//        JiShuSort(nums);
-//        insertSort(nums);
-        int target = -1;
-        System.out.println(binarySearch(nums, target));
+        heapSort(nums);
     }
 
     private static int binarySearch(int[] nums, int target) {
@@ -216,6 +205,21 @@ public class tes1 {
         }
         for (int i = 0; i < n1 + n2; i++) {
             nums[first + i] = copyNums[i];
+        }
+    }
+
+    /**
+     * heap sort
+     * 1.build big heap
+     * 2.exchange 0 len--
+     * 3.downadjust 0
+     * 4. O = O(n)+O(nlogn)
+     */
+    public static void heapSort(int[] nums) {
+        AboutHeap.initailHeap(nums);
+        for (int i = nums.length - 1; i >= 0; i--) {
+            AboutHeap.swap(nums, 0, i);
+            AboutHeap.downAdjust(nums, 0, i);
         }
     }
 

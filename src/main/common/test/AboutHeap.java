@@ -21,6 +21,21 @@ public class AboutHeap {
         for (int i : nums) {
             System.out.print(i + " ");
         }
+        allSort("12345","");
+
+    }
+
+    private static void allSort(String str, String out) {
+        if (0 == str.length()) {
+            System.out.println(out);
+        } else {
+            for (int i = 0; i < str.length(); i++) {
+                StringBuilder builder = new StringBuilder(str);
+                String c = String.valueOf(builder.charAt(i));
+                String sub = builder.deleteCharAt(i).toString();
+                allSort(sub, out + c);
+            }
+        }
     }
 
     /**
@@ -41,10 +56,10 @@ public class AboutHeap {
     public static void downAdjust(int[] nums, int i, int len) {
         int childIndex = 2 * i + 1;
         while (childIndex < len) {
-            if (childIndex + 1 < len && nums[childIndex + 1] < nums[childIndex]) {
+            if (childIndex + 1 < len && nums[childIndex + 1] > nums[childIndex]) {
                 childIndex++;
             }
-            if (nums[i] > nums[childIndex]) {
+            if (nums[i] < nums[childIndex]) {
                 swap(nums, i, childIndex);
             }
             i = childIndex;
