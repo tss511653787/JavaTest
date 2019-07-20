@@ -1,6 +1,10 @@
 package test;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
 /**
  * @author tss2019
  * @version 1.0
@@ -10,11 +14,57 @@ public class Test2 {
     /**
      * test main
      */
-    public static void main(String[] args) {
-        TreeNode root = initailBSTree();
-        deleteInBST(1, root);
-        tes1.printTree(root);
+    public static void main(String[] args) throws FileNotFoundException {
+//        TreeNode root = initailBSTree();
+//        deleteInBST(1, root);
+//        tes1.printTree(root);
+//        System.out.println();
+//        reviewWC();
 
+        String[] strs = {"a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5"};
+        changeLocation(strs, 5);
+
+    }
+
+    private static void changeLocation(String[] strs, int n) {
+        for (int i = n; i < strs.length - 1; i++) {
+            int k = i;
+            for (int j = strs.length - 1 - i; j > 0; j--) {
+                swap(strs, k, k - 1);
+                k--;
+            }
+        }
+    }
+
+    private static void swap(String[] strs, int k, int i) {
+        String tmp = strs[k];
+        strs[k] = strs[i];
+        strs[i] = tmp;
+    }
+
+
+    public static void reviewWC() throws FileNotFoundException {
+        File file = new File("/Users/tss/Downloads/str1");
+        StringBuilder builder = new StringBuilder();
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()) {
+            builder.append(scanner.nextLine());
+        }
+        String[] strings = builder.toString().split("\\s+");
+        Map<String, Integer> map = new TreeMap<>();
+        for (String s : strings) {
+            map.put(s, map.getOrDefault(s, 1) + 1);
+        }
+        Set<Map.Entry<String, Integer>> set = new TreeSet<>((o1, o2) -> {
+            if (o1.getValue() > o2.getValue()) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+        Set<Map.Entry<String, Integer>> setx = map.entrySet();
+        set.addAll(setx);
+        set.forEach(en -> System.out.println(en.getKey() + " " + en.getValue()));
     }
 
     public static TreeNode initailBSTree() {
